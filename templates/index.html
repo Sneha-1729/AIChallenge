@@ -51,15 +51,18 @@
 </head>
 <body>
     <h1>Accident Forecasting</h1>
-    <form id="prediction-form">
+
+    <form method="POST" action="/predict">
         <label for="year">Enter Year:</label>
-        <input type="number" id="year" name="year" placeholder="e.g., 2021" required>
+        <input type="number" id="year" name="year" required>
 
         <label for="month">Enter Month:</label>
-        <input type="number" id="month" name="month" placeholder="e.g., 1 for January" required>
+        <input type="number" id="month" name="month" required>
 
-        <button type="button" onclick="submitPrediction()">Get Prediction</button>
+        <button type="submit">Get Prediction</button>
     </form>
+
+
     <div class="result" id="result"></div>
 
     <script>
